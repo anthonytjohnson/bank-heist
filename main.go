@@ -49,5 +49,10 @@ func main() {
 		}
 	}
 
-	fmt.Printf("Is the heist on? %v", isHeistOn)
+	fmt.Println("Is the heist on?", isHeistOn)
+
+	if isHeistOn {
+		amtStolen := 10000 + rand.Intn(1000000)
+		fmt.Println("We were able to steal $", amtStolen)
+	}
 }
