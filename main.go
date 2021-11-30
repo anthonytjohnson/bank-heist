@@ -28,5 +28,26 @@ func main() {
 		fmt.Println("We can't open the vault")
 	}
 
+	leftSafely := rand.Intn(5)
+
+	if isHeistOn {
+		switch leftSafely {
+		case 0:
+			isHeistOn = false
+			fmt.Println("Looks like you tripped an alarm... run?")
+		case 1:
+			isHeistOn = false
+			fmt.Println("Turns out vault doors don't open from the inside...")
+		case 2:
+			isHeistOn = false
+			fmt.Println("When did they start raising dogs in vaults??")
+		case 3:
+			isHeistOn = false
+			fmt.Println("Looks like this fingerprint scanner won't accept any fingerprint...")
+		default:
+			fmt.Println("Start the getaway car!")
+		}
+	}
+
 	fmt.Printf("Is the heist on? %v", isHeistOn)
 }
